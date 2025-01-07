@@ -1,21 +1,17 @@
-import React from 'react'
-import Stories from 'react-insta-stories'
-
+import React from 'react';
+import Stories from 'react-insta-stories';
 
 function App() {
-   
-  const stories = [{
-
+  const stories = [
     {
       url: 'https://i.pinimg.com/736x/64/98/84/64988408be34f80f560df31f8321fa0a.jpg',
       header: {
-        heading: 'Amrita shingh',
+        heading: 'Amrita Singh',
         subheading: 'Posted 5 minutes ago',
         profileImage: 'https://i.pinimg.com/736x/74/49/00/744900e93549505bae28039b0d668540.jpg',
       },
       duration: 5000,
     },
-
     {
       url: 'https://i.pinimg.com/736x/50/2f/b0/502fb0fca6ca6cee5f4a510fc998dc67.jpg',
       header: {
@@ -25,41 +21,30 @@ function App() {
       },
       duration: 5000,
     },
-
     {
       url: 'https://i.pinimg.com/736x/90/86/ee/9086eefc436ded1c28138b5e970841f4.jpg',
       header: {
-        heading: 'tanya yadav',
+        heading: 'Tanya Yadav',
         subheading: 'Posted 18 minutes ago',
         profileImage: 'https://i.pinimg.com/736x/5b/6f/1b/5b6f1ba070c39fa8885fa83577c0501b.jpg',
       },
       duration: 5000,
     },
+  ];
 
-
-  }]
- 
- 
-   
- 
- 
- 
- 
- 
   return (
-   <div>
-    <Stories 
-    
-    stories={stories}
-    defaultInterval={1500}
-    width={432}
-    height={768}
-    
-    
-    
-    />
-   </div>
-  )
+    <div>
+      <Stories
+        stories={stories}
+        defaultInterval={1500}
+        width={432}
+        height={768}
+        storyContainerStyles={{ borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)' }}
+        keyboardNavigation={true}
+        // loop={true}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
